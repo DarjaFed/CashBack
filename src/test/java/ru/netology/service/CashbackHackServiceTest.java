@@ -1,19 +1,12 @@
 package ru.netology.service;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
+    private CashbackHackService service;
 
-    @BeforeMethod
-    public void setup() {
-        CashbackHackService service = new CashbackHackService();
-    }
-
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void shouldReturnZeroForAmount1000() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
@@ -22,7 +15,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldReturnOneForAmount999() {
         CashbackHackService service = new CashbackHackService();
         int amount = 999;
@@ -31,7 +24,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldReturn999ForAmount1001() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1001;
@@ -40,7 +33,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldReturn500ForNegativeAmount() {
         CashbackHackService service = new CashbackHackService();
         int amount = -500;
@@ -49,7 +42,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldReturn1000ForZeroAmount() {
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
@@ -58,7 +51,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldReturn500ForLargeNumber() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000500;
